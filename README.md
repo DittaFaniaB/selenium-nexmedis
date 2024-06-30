@@ -1,22 +1,16 @@
-# Template automation
-Dalam pengujian perangkat lunak, otomatisasi pengujian adalah penggunaan perangkat lunak yang terpisah dari perangkat lunak yang diuji untuk mengontrol pelaksanaan pengujian dan perbandingan hasil aktual dengan hasil pengujian yang diharapkan.
+# Automation - nexmedis - Login Page
+
+This is an automation script using
+
+- Selenium
+- JavaScript
+- Mocha
+- Chai
+- Allure report
+- firefox webdriver
 
 ## Initiate Automation Project
-Project automation menggunakan [Node.js](https://nodejs.org/en/download) sebagai package manager
-```
-{
-  "name": "nama_project-automation",
-  "version": "1.0.0",
-  "description": "deskripsi project",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "author": "nama_qa",
-  "license": "ISC"
-}
-```
-Untuk meringankan QA dalam melakukan regresi maka diterapkan automation menggunakan Selenium (javascript). Install [selenium](https://www.selenium.dev/) run command berikut pada terminal:
+
 ```
 npm install selenium-webdriver
 npm install chromedriver // pastikan versi chromedriver sama dengan versi browser
@@ -54,8 +48,4 @@ npm run generate <path> // untuk path spesifik
 
 ---
 ## Eksport Issue Allure-Report
-- Setelah menjalankan `npm run start` dan `npm run report` maka halaman Allure-Report akan muncul. ![allure-start](template-automation/data/source/allure-start.png)
-- Untuk mengunduh dokumen hasil menjalankan automation maka klik menu Suite dan klik icon download. ![allure-export](https://gitlab.javan.co.id/automation-test/template-automation/-/blob/main/data/source/allure-export-button.PNG)
-- Dokumen eksport berekstensi `.csv`, agar tampilan terlihat lebih baik maka block cell baris paling awal. ![block-line-csv](https://gitlab.javan.co.id/automation-test/template-automation/-/blob/main/data/source/block-semualine.png)
-- Kemudian klik menu Data pada excel dan klik Text-to-Column. Pilih radio button 'Delimiter' kemudian klik tombol Next. Pilih 'comma' kemudian klik tombol Next dan klik tombol Finish. ![data-text-t-column](https://gitlab.javan.co.id/automation-test/template-automation/-/blob/main/data/source/klik-data-text-to-column.png)
-- Data akan terlihat lebih rapih dan mudah dibaca. ![allure-save](https://gitlab.javan.co.id/automation-test/template-automation/-/blob/main/data/source/save.JPG)
+- Setelah menjalankan `npm run start` dan `npm run report` maka halaman Allure-Report akan muncul. 
