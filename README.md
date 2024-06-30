@@ -13,7 +13,7 @@ This is an automation script using
 
 ```
 npm install selenium-webdriver
-npm install chromedriver // pastikan versi chromedriver sama dengan versi browser
+npm install chromedriver // pastikan versi chromedriver sama dengan versi browser [jika menggunakan chrome driver]
 npm install dotenv
 ```
 ---
