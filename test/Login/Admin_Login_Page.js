@@ -1,6 +1,6 @@
 const { By, Key, until } = require('selenium-webdriver');
 require('chromedriver');
-const reusable_step = require('../../page/reusable-test');
+const reusable_step = require('../../page/reusable_test');
 const assertion = require('../../helpers/assertion');
 const element = require('../../helpers/element');
 const { expect } = require('chai');
