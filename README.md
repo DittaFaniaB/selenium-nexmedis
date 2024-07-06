@@ -37,10 +37,10 @@ npm install allure-mocha
   },
 ```
 ### Run test tanpa generate allure report
-1.  Command untuk menjalankan test tanpa generate file `.json`  
+1.  Command untuk menjalankan test tanpa generate file `.json` pada folder `allure-result` 
 ```
-`npm test`
-`npm test <path>`
+npm test
+npm test <path>
 ```
 
 
