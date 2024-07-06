@@ -13,7 +13,7 @@ This is an automation script using
 
 ```
 npm install selenium-webdriver
-npm install chromedriver // pastikan versi chromedriver sama dengan versi browser [jika menggunakan chrome driver]
+npm install chromedriver // [jika menggunakan chrome driver] pastikan versi chromedriver sama dengan versi browser 
 npm install dotenv
 ```
 ---
@@ -36,15 +36,23 @@ npm install allure-mocha
     "test": "mocha -r dotenv/config --no-timeouts"
   },
 ```
-- Pertama command untuk menjalankan test tanpa generate file `.json` gunakan `npm test` atau `npm test <path>`.
-- Jalankan `npm run report` untuk generate folder `allure-report` 
-- Kemudian jalankan `npm run start` pada terminal untuk meluncurkan allure-report pada browser dengan port `8080` (jangan stop/close/ctrl+c terminal)
-- Kemudian run selenium test yang diinginkan pada terminal lain dan akan generate folder `allure-results` secara otomatis.
+### Run test tanpa generate allure report
+1.  Command untuk menjalankan test tanpa generate file `.json`  
+```
+`npm test`
+`npm test <path>`
+```
+
+
+### Run test sekaligus generate allure report
+1. Untuk mengenerate folder `allure-results` secara otomatis ketika run test, jalankan command berikut:
 ```
 npm run generate
 npm run generate <path> // untuk path spesifik
 ```
-- Dan jalankan `npm run report` dan klik tombol refresh halaman port 8080.
+2. Jalankan `npm run report` untuk generate folder `allure-report` 
+3. Kemudian jalankan `npm run start` pada terminal untuk meluncurkan allure-report pada browser dengan port `8080` (jangan stop/close/ctrl+c terminal)
+
 
 ---
 ## Eksport Issue Allure-Report

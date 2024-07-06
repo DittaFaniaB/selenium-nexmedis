@@ -27,15 +27,20 @@ async function clickButtonCss(selector) {
 }
 
 async function fillFilledXpath(selector, value, enter = false) {
-  await driver.sleep(500);
-  const ele = driver.wait(until.elementLocated(By.xpath(selector)));
-  await driver.sleep(500);
-  await ele.clear();
-  await driver.sleep(500);
-  await ele.sendKeys(value);
-  if (enter == true) {
+  try {
     await driver.sleep(500);
-    await ele.sendKeys(Key.ENTER);
+    var ele  = await driver.findElement(By.xpath(selector));
+    await driver.sleep(500);
+    await ele.clear();
+    await driver.sleep(500);
+    await ele.sendKeys(value);
+    if (enter == true) {
+      await driver.sleep(500);
+      await ele.sendKeys(Key.ENTER);
+    }
+  } catch (error) {
+    console.error("Error occurred while getting input field:", error);
+    throw error; // Propagate the error further if needed
   }
 }
 
