@@ -2,6 +2,8 @@ const { Builder, By, Key, until } = require('selenium-webdriver');
 require('chromedriver');
 
 const firefox = require("selenium-webdriver/firefox");
+const element = require('../helpers/element');
+const assertion = require('../helpers/assertion');
 
 async function accessWeb() {
   options = new firefox.Options();
@@ -31,5 +33,14 @@ async function accessWeb() {
   // await driver.get(process.env.BASE_URL);
 }
 
-module.exports = {accessWeb: accessWeb,};
+async function inputOrganizationID() {
+  await element.fillFilledXpath(`//input[@id='id']`, process.env.organization_id );
+  await element.clickButtonXpath(`//button[@class="btn solid"]`);
+  await assertion.assertionValueExists(`//input[@id='id']`);
+  await assertion.assertionValueExists(`//input[@id='password']`);
+}
+module.exports = {
+  accessWeb: accessWeb,
+  inputOrganizationID: inputOrganizationID,
+};
   
