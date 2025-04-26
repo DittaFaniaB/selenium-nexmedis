@@ -28,7 +28,7 @@ describe('Nexmedis', function() {
             await assertion.assertionEqualSelectorValue(`//div[@class="title"]`, `Sistem informasi kesehatan terpadu untuk pelayanan medis`);
             await assertion.assertionEqualSelectorValue(`//h1[@class="desc"]`, `Aplikasi rekam medis elektronik (RME) bertenaga AI untuk menyederhanakan operasional fasilitas kesehatan, memajukan layanan klinis Anda`);
         })
-        it('[TC0002] Pengguna dapat memasukkan ID organisasi dengan benar', async function() 
+        it('[TC0002] Pengguna dapat melanjutkan login dengan ID organisasi dengan benar', async function() 
         {
             await element.fillFilledXpath(`//input[@id='id']`, process.env.organization_id );
             await element.clickButtonXpath(`//button[@class="btn solid"]`);
